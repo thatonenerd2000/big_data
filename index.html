@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ComUnit</title>
+        <link rel="stylesheet" href="index.css" type="text/css" />
+        <link rel="stylesheet" href="bootstrap.css" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Gamja+Flower|Unlock" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?key=AuyI2iuaBDhptSUphEnSVX6LR6_S5ha9WQGz2XjcMqHRkFoz8P5K_F_g83nrNel0' async defer></script>
+    </head>
+    
+    <body>
+        <div id = "sec1">
+            <h1 class="scrolla" data-animate="fadeInUp" data-duration="2.0s" data-delay="0.1s" id="slogan">For better unity help your community</h1>
+            <i style="top:32vh; position:relative;color:white;" class="fa fa-caret-down fa-3x" aria-hidden="true" id="downarrow"></i>
+        </div>
+        <br>
+        <br>
+        <div style="text-align:center" id = "sec2">
+            <div class="container" id="text">
+                <h1 style="font-family: 'Unlock', cursive;">ComUnit</h1>
+                <h4 style="font-family: 'Gamja Flower', cursive;">ComUnit is a campaign build of some student community server. As a part of our own community it is our responibility to identify the issue of the community and bring it to public eyes. ComUnit helps you do that. We take your opinion from your community and help to solve the community issue/</h4>
+            </div>
+            <hr>
+            <div style="font-family: 'Gamja Flower', cursive;" class="container" id="current">
+                <h4>Current Community Board: <strong style="color:blue">Bronx 06</strong></h4>
+                <h4>Current Issue: <strong style="color:Purple">Hot Water</strong></h4>
+                <h4>Total Complaints: <strong><span style="color:red" id="comp"></span></strong></h4>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id="sec3">
+            <br>
+            <h1 style="font-family: 'Unlock', cursive; text-align:center;">Data Breakdown</h1>
+            <br>
+            <div style="text-align:center;" id="stats">
+                <img src="./comp.png" style="height:80vh; box-shadow: 5px 5px 10px #AAA;">
+                <br>
+                <br>
+                <h5 style="color: #c0ab58">Yellow = building complaints</h5>
+                <h5 style="color: #6f80b3">Blue = Apartment complaints</h5>
+                <br>
+                <hr>
+                <br>
+                <h3 style="font-family: 'Gamja Flower', cursive;">Especially in the Bronx Borough, most apartment buildings have been known for violating the rules of heating/hot water</h3>
+                <br>
+                <h2 style="font-family: 'Unlock', cursive;">Residential Heat and Water Requirements</h2>
+                <br>
+                <ul class="container">
+                    <h5 style="font-family: 'Unlock', cursive;">For the period between October 1 and May 31, the city requires building owners to provide tenants with heat and water according to the following rules:</h5>
+                    <li style="font-family: 'Gamja Flower', cursive;"><h4>Between 6 AM to 10 PM, if the outside temperature falls between below 55 degree, the inside temperature must be 68 degree fahrenheit</h4></li>
+                    <li style="font-family: 'Gamja Flower', cursive;"><h4>Between 6 AM to 10 PM, if the outside temperature falls between below 55 degree, the inside temperature must be 68 degree fahrenheit</h4></li>
+                </ul>
+                <br>
+                <br>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div id ="sec4">
+            <h1 style="font-family: 'Unlock', cursive; text-align:center; margin-bottom: 50px;">Map of Complaints in the Board</h1>
+            <div id="myMap" style='position:relative;width:80%;height:600px; box-shadow: 5px 5px 10px #AAA;margin: 10px auto'></div>
+            <p style="text-align: center; font-size: 12px; margin-bottom: 50px">Data provided by NYC Open Data</p>
+        </div>
+        <div id = "sec5">
+            <br>
+            <ul style="text-align:center;list-style-type:none;" class="container">
+                <h5 style="font-family: 'Unlock', cursive;">Possible solution</h5>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>New buildings would have individual thermostats in apartment</h4></li>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>Older buildings should be required to have continuous available heat and multiple hot water tanks </h4></li>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>invest in a space heater to combat heating troubles</h4></li>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>Report a Housing Code Violation to 311 and they would investigate the issue with visits to the building</h4></li>
+            </ul>
+            <br>
+            <ul class="container" style="text-align:center;list-style-type:none;">
+                <h5 style="font-family: 'Unlock', cursive;">$Budget$</h5>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>Community board 6 population: <strong style="color:red;">83.3k+</strong></h4></li>
+                <br>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>Average space heater unit cost: $40</li>
+                <li style="font-family: 'Gamja Flower', cursive;"><h4>Most efficient space heaters you can find will cost you $0.16 per hour to run which for 30 days/1 month would be $115.20 per month</li>
+            </ul>
+        </div>
+    </body>
+    
+    <!--https://data.cityofnewyork.us/resource/fhrw-4uyv.json?community_board=06%20BRONX&complaint_type=HEAT/HOT%20WATER-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="./app/index.js"></script>
+
+    <script type="text/javascript" src="bootstrap.js"></script>
+    <script src="./scrolla.jquery.js"></script>
+</html>
+
+
